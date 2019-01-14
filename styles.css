@@ -1,0 +1,92 @@
+body {
+  background-color: blue;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+/* layout */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.75fr 0.75fr 0.5fr;
+  grid-gap: 1rem;
+  max-width: 80vw;
+  height: 100vh;
+  margin: auto;
+}
+
+header {
+  grid-column: 1/4;
+  grid-row: 1;
+  margin:auto;
+}
+section{
+  margin:auto;
+
+}
+
+#mySketch {
+  width: 800px;
+  height:250px;
+  margin:auto;
+
+}
+
+#studios {
+  grid-column: 1/2;
+  grid-row: 2;
+  padding: 1rem;
+
+}
+
+#research {
+  grid-column: 2/3;
+  grid-row: 2;
+  padding: 1rem;
+}
+
+#development {
+  grid-column: 3/4;
+  grid-row: 2;
+  padding: 1rem;
+}
+
+footer {
+  grid-column: 1/4;
+  grid-row: 3;
+  margin:auto;
+  padding-top: 2rem;
+  position:fixed;
+  bottom: 0;
+}
+/* typography */
+h2 {
+  background-color: blue;
+  padding: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  text-decoration: line-through;
+  color: white;
+}
+
+a:active {
+  color: white;
+}
