@@ -1,0 +1,39 @@
+body {
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+}
+
+/* layout */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.75fr 0.75fr 0.5fr;
+  grid-gap: 1rem;
+  max-width: 80vw;
+  height: 100vh;
+  margin: auto;
+}
+
+header {
+  grid-column: 1/2;
+  grid-row: 1;
+  color: blue;
+}
+
+article {
+  margin: auto;
+}
+
+footer {
+  grid-column: 1/2;
+  grid-row: 3;
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
