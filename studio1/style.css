@@ -1,0 +1,127 @@
+/*content*/
+body {
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.25fr 0.75fr 0.5fr;
+  grid-gap: 1rem;
+  max-width: 80vw;
+  height: 100vh;
+  margin: auto;
+}
+
+header {
+  padding-top: 1rem;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  color: #7142f4;
+}
+/* box going around form and form output
+nested grids used to put form and outpout in two cols
+*/
+#formBox {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  border-style: solid;
+  border-width: thin;
+  border-color: #7142f4;
+  border-radius: 2px;
+  display: grid;
+  grid-template-areas: "input output";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+
+#formInput {
+  grid-area: input;
+  border-right-style: solid;
+  border-width: thin;
+  border-color: #7142f4;
+  display: table;
+  padding-left: 1rem;
+  padding-bottom: 1.5em;
+}
+
+#formOutput {
+  grid-area: output;
+  border-style: none;
+  padding-left: 1rem;
+  padding-bottom: 1.5em;
+}
+/*sticky footer*/
+footer {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  position: fixed;
+  bottom: 0;
+  padding-top: 2rem;
+}
+/*h styling*/
+h2 {
+  color: #7142f4;
+}
+/*form styling*/
+fieldset {
+  border-style: none;
+  padding: 1rem;
+}
+
+input {
+  font-family: 'Raleway', sans-serif;
+
+}
+
+input[type=text] {
+  border: 2px solid #7142f4;
+  border-radius: 2px;
+  border-width: thin;
+  padding: 0.25rem;
+  width: 50%;
+  float: right;
+}
+input[type=button], input[type=reset], input[type=submit]{
+
+  background-color: #7142f4;
+  color:white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem;
+  text-decoration: none;
+  margin: 1rem;
+  float: right;
+
+}
+
+label {
+  padding-right: 1rem;
+  color: #ff908e;
+  display: inline-block;
+}
+/*img alignment*/
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*a styling for footer*/
+a {
+  text-decoration: none;
+}
+a:link {
+  color: #7142f4;
+}
+
+a:visited {
+  color: #7142f4;
+}
+
+a:hover {
+  text-decoration: line-through;
+  color: #7142f4;
+}
+
+a:active {
+  color: #7142f4;
+}

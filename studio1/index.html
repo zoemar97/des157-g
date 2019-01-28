@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Astrology Libs</title>
+  <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito:700%7CRaleway" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <h1>astrology libs</h1>
+  </header>
+  <section id="formBox">
+    <section id="formInput">
+      <h2>let the stars decide your fate!</h2>
+      <form>
+        <fieldset>
+          <label for="firstName">first name:</label>
+          <input type="text" name="firstName" id="firstName" value="type your name here" required>
+        </fieldset>
+        <fieldset>
+          <label for="sunSign">sun sign: </label>
+          <input type="text" name="sunSign" id="sunSign" value="type your sun sign here" required>
+        </fieldset>
+        <fieldset>
+          <label for="adj">adjective: </label>
+          <input type="text" name="adj" id="adj" value="adjective about you" required>
+        </fieldset>
+        <fieldset>
+          <label for="verb">verb: </label>
+          <input type="text" name="verb" id="verb" value="a feeling verb" required>
+        </fieldset>
+        <fieldset>
+          <label for="number">number: </label>
+          <input type="text" name="number" id="number" value="pick a number from 0-9" required>
+        </fieldset>
+        <fieldset>
+          <label for="color">color: </label>
+          <input type="text" name="color" id="color" value="pick a fun color!" required>
+        </fieldset>
+        <input type="submit" value="submit!" id="submit">
+        <input type="reset" value="astrology is fake" id="reset">
+
+
+      </form>
+    </section>
+
+    <section id="formOutput">
+      <h2>your sun sign: taurus</h2>
+      <img src="images/astro.png" alt="astrology img" width="300" height="300">
+      <p> super cool awesome mad lib will be here</p>
+
+    </section>
+  </section>
+  <footer>
+    <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5 |</a>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
