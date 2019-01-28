@@ -31,8 +31,12 @@
           <input type="text" name="sunSign" id="sunSign" value="type your sun sign here" required>
         </fieldset>
         <fieldset>
-          <label for="adj">adjective: </label>
-          <input type="text" name="adj" id="adj" value="adjective about you" required>
+          <label for="negAdj">adjective: </label>
+          <input type="text" name="negAdj" id="negAdj" value="negative adjective" required>
+        </fieldset>
+        <fieldset>
+          <label for="posAdj">adjective: </label>
+          <input type="text" name="posAdj" id="posAdj" value="positive adjective" required>
         </fieldset>
         <fieldset>
           <label for="verb">verb: </label>
@@ -46,7 +50,7 @@
           <label for="color">color: </label>
           <input type="text" name="color" id="color" value="pick a fun color!" required>
         </fieldset>
-        <input type="submit" value="submit!" id="submit">
+        <input type="submit" value="astrology is fun!" id="submit">
         <input type="reset" value="astrology is fake" id="reset">
 
 
@@ -54,9 +58,9 @@
     </section>
 
     <section id="formOutput">
-      <h2>your sun sign: taurus</h2>
+      <h2 id="signChange">Welcome</h2>
       <img src="images/astro.png" alt="astrology img" width="300" height="300">
-      <p> super cool awesome mad lib will be here</p>
+      <p id="outputMsg"> hello </p>
 
     </section>
   </section>
