@@ -40,15 +40,16 @@ nested grids used to put form and outpout in two cols
   border-width: thin;
   border-color: #7142f4;
   display: table;
-  padding-left: 1rem;
-  padding-bottom: 1.5em;
+  padding: 1rem 1rem 1.5rem 1rem;
+
 }
 
 #formOutput {
   grid-area: output;
   border-style: none;
-  padding-left: 1rem;
-  padding-bottom: 1.5em;
+  padding: 1rem;
+  line-height: 1.5rem;
+
 }
 /*sticky footer*/
 footer {
@@ -71,6 +72,11 @@ fieldset {
 input {
   font-family: 'Raleway', sans-serif;
 
+}
+p{
+  font-family: 'Raleway', sans-serif;
+  padding-top: 1rem;
+  text-indent: 2rem;
 }
 
 input[type=text] {
