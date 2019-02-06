@@ -1,4 +1,22 @@
 /*mobile ver*/
+
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: 'Rajdhani', sans-serif;
   background-color: white;
@@ -8,49 +26,41 @@ body {
   grid-gap: 1px;
   grid-template-rows: 0.25fr 1fr 0.25fr;
   grid-template-columns: 1fr;
+  background: linear-gradient(270deg, #fb809f, #b2fff5);
+  background-size: 400% 400%;
+  animation: AnimationName 10s ease infinite;
 }
 
 header {
   grid-column: 1/2;
   grid-row: 1/2;
-  background-color: pink;
   padding: 1rem;
-}
-
-#bagSect {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  background-color: red;
-}
-
-#bottleSect {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  background-color: blue;
-}
-
-#padSect {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  background-color: coral;
-}
-
-#gumSect {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  background-color: green;
-}
-footer{
-  grid-column: 1/2;
-  grid-row: 3/4;
-  background-color: gray;
+  color:white;
   text-align: center;
 }
-/*image styling*/
-img{
-  display:block;
-  margin: auto;
+#imgSect{
+  grid-column: 1/2;
+  grid-row: 2/3;
+  padding: 1rem;
 }
+footer {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  text-align: center;
+  padding-top: 1rem;
+}
+/*image styling*/
+img {
+  display: block;
+  margin: auto;
+
+}
+#bagSect, #padSect, #bottleSect, #gumSect{
+  border: 2px solid white;
+  border-radius: 15em;
+  
+}
+
 /*footer link styling*/
 a {
   text-decoration: none;
@@ -72,6 +82,7 @@ a:hover {
 a:active {
   color: #7142f4;
 }
+
 /*modal content/image/p*/
 .content {
   display: grid;
@@ -81,23 +92,28 @@ a:active {
   padding: 1em;
   width: 80%;
 }
+
 /*this shows the image item on the modal(pop up)*/
 #changeImg {
-  width:300px;
-  height:300px;
+  width: 300px;
+  height: 300px;
   margin: auto;
   grid-column: 1/2;
   grid-row: 1/2;
   padding-top: 4rem;
 }
-h2{
+
+h2 {
   grid-column: 1/2;
   grid-row: 1/2;
+  color: #ff8668;
 }
-p{
+
+p {
   grid-column: 1/2;
   grid-row: 2/3;
 }
+
 /* modal */
 .modal {
   display: none;
@@ -112,7 +128,6 @@ p{
   border-radius: 0.5em;
 }
 
-
 /*close button*/
 .close {
   color: black;
@@ -122,6 +137,7 @@ p{
   top: 1em;
   right: 1em;
 }
+
 /*close button styling*/
 .close:hover,
 .close:focus {
@@ -130,11 +146,11 @@ p{
   cursor: pointer;
 }
 
-/*web*/
+/*desktop*/
 @media only screen and (min-width: 769px) {
-  * {
+  /* * {
     box-sizing: border-box;
-  }
+  } */
 
   body {
     font-family: 'Rajdhani', sans-serif;
@@ -153,45 +169,23 @@ p{
     grid-column: 1;
     grid-row: 1/2;
     text-align: center;
-    color: #ff8668;
+    color:white;
   }
-
-  section {
+  /*image areas*/
+  #imgSect{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     grid-column: 1;
     grid-row: 2/3;
   }
-  /*images wrapped in a section*/
-  #bagSect {
-    grid-column: 1;
-    grid-row: 2/3;
-    margin: auto;
-  }
 
-  #bottleSect {
-    grid-column: 1;
-    grid-row: 2/3;
-    margin: auto;
-  }
-
-  #padSect {
-    grid-column: 1;
-    grid-row: 2/3;
-    margin: auto;
-  }
-
-  #gumSect {
-    grid-column: 1;
-    grid-row: 2/3;
-    margin: auto;
-  }
   /*this was to make images responsive to scale*/
-  #bag,#pad,#bottle,#gum{
-    width: 100%;
-    height: auto;
-    display:block;
+  #bagSect, #padSect, #bottleSect, #gumSect {
+    display: block;
+    margin: auto;
   }
+
   /*modal content/image/p*/
   .content {
     display: grid;
@@ -201,25 +195,28 @@ p{
     padding: 1em;
     width: 80%;
   }
+  /*modal content*/
   #changeImg {
-    width:300px;
-    height:300px;
+    width: 300px;
+    height: 300px;
     margin: auto;
     grid-column: 1/2;
     grid-row: 1/2;
     padding-top: 4rem;
   }
-  h2{
+
+  h2 {
     grid-column: 1/2;
     grid-row: 1/2;
   }
-  p{
+
+  p {
     grid-column: 2/3;
     grid-row: 1/2;
-    margin:auto;
+    margin: auto;
   }
 
-/*footer again nothing special*/
+  /*footer again nothing special*/
   footer {
     padding-top: 1rem;
     grid-column: 1;
