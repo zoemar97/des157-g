@@ -10,24 +10,39 @@
   <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Rajdhani:400,700" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
 
 </head>
 
 <body>
 
   <header>
-    <h1>What's In My Bag ? </h1>
+    <h1>what is in my bag ? </h1>
   </header>
-  <section>
-    <img src="images/bag.svg" id="bag" alt="backpack drawing" width="400" height="500">
-
-    <img src="images/bottle.svg" id="bottle" alt="water bottle drawing" width="300" height="500">
-
-    <img src="images/pad.svg" id="pad" alt="menstrual pad drawing" width="200" height="200">
-
-    <img src="images/gum.svg" id="gum" alt="pack of gum drawing" width="200" height="200">
+  <!-- all 4 image icons -->
+  <section id="imgSect">
+    <section id="bagSect">
+      <img src="images/bag.svg" id="bag" alt="backpack drawing">
+    </section>
+    <section id="bottleSect">
+      <img src="images/bottle.svg" id="bottle" alt="water bottle drawing" width="400" height="400">
+    </section>
+    <section id="padSect">
+      <img src="images/pad.svg" id="pad" alt="menstrual pad drawing" width="400" height="400">
+    </section>
+    <section id="gumSect">
+      <img src="images/gum.svg" id="gum" alt="pack of gum drawing" width="400" height="400">
+    </section>
   </section>
+  <!-- the pop up to show image description -->
+  <section class='modal'>
+    <section class='content'>
+      <h2>My handy baggu backpack</h2>
+      <img src="images/bottle.svg" id="changeImg" alt="image changes on click" width="200" height="200">
+      <p>This bag is amazing because it carries all of my goods</p>
+    </section>
+    <div class="close">&times;</div>
+  </section>
+  <!-- footer nothing special -->
   <footer>
     <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5 |</a>
     <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
