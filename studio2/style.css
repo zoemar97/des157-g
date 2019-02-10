@@ -61,8 +61,9 @@ img {
 footer {
   grid-column: 1/2;
   grid-row: 3/4;
-  text-align: center;
   padding-top: 1rem;
+  position: fixed;
+  bottom:0;
 }
 /*footer link styling*/
 a {
