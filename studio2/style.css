@@ -1,6 +1,22 @@
 /*mobile ver*/
-
-
+* {
+  box-sizing: border-box;
+}
+/*body css/including background gradient animation*/
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: white;
+  max-width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  grid-template-columns: 1fr;
+  background: linear-gradient(270deg, #ff988e, #b2fff5);
+  background-size: 400% 400%;
+  animation: AnimationName 10s ease infinite;
+}
+/*gradient animation*/
 @keyframes AnimationName {
   0% {
     background-position: 0% 50%
@@ -14,64 +30,51 @@
     background-position: 0% 50%
   }
 }
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Rajdhani', sans-serif;
-  background-color: white;
-  max-width: 100%;
-  height: 100vh;
-  display: grid;
-  grid-gap: 1px;
-  grid-template-rows: 0.25fr 1fr 0.25fr;
-  grid-template-columns: 1fr;
-  background: linear-gradient(270deg, #fb809f, #b2fff5);
-  background-size: 400% 400%;
-  animation: AnimationName 10s ease infinite;
-}
 
 header {
   grid-column: 1/2;
   grid-row: 1/2;
   padding: 1rem;
-  color:white;
+  color: white;
   text-align: center;
 }
-#imgSect{
+/*layout of images*/
+#imgSect {
   grid-column: 1/2;
   grid-row: 2/3;
   padding: 1rem;
 }
+/*image styling*/
+img {
+  display: block;
+  margin: auto;
+}
+/*individual image sects*/
+#bagSect, #padSect, #bottleSect, #gumSect {
+  border: 2px solid;
+  border-color: rgba(254, 254, 254, 0.30);
+  border-radius: 15em;
+  background-color: rgba(251, 128, 159, 0.15);
+  margin: 1rem;
+}
+
 footer {
   grid-column: 1/2;
   grid-row: 3/4;
   text-align: center;
   padding-top: 1rem;
 }
-/*image styling*/
-img {
-  display: block;
-  margin: auto;
-
-}
-#bagSect, #padSect, #bottleSect, #gumSect{
-  border: 2px solid white;
-  border-radius: 15em;
-  
-}
-
 /*footer link styling*/
 a {
   text-decoration: none;
 }
 
 a:link {
-  color: #7142f4;
+  color: white;
 }
 
 a:visited {
-  color: #7142f4;
+  color: white;
 }
 
 a:hover {
@@ -80,7 +83,7 @@ a:hover {
 }
 
 a:active {
-  color: #7142f4;
+  color: white;
 }
 
 /*modal content/image/p*/
@@ -88,49 +91,27 @@ a:active {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
-  margin: auto;
-  padding: 1em;
+  margin: 2em;
   width: 80%;
 }
-
-/*this shows the image item on the modal(pop up)*/
-#changeImg {
-  width: 300px;
-  height: 300px;
-  margin: auto;
-  grid-column: 1/2;
-  grid-row: 1/2;
-  padding-top: 4rem;
-}
-
-h2 {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  color: #ff8668;
-}
-
-p {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-
 /* modal */
 .modal {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
   height: 50%;
   background-color: white;
+  opacity: 0.95;
   border: 1px solid #ff8668;
   border-radius: 0.5em;
 }
 
 /*close button*/
 .close {
-  color: black;
+  color: #fb809f;
   font-size: 28px;
   font-weight: bold;
   position: absolute;
@@ -146,15 +127,31 @@ p {
   cursor: pointer;
 }
 
+/*this shows the image item on the modal(pop up)*/
+#changeImg {
+  width: 300px;
+  height: 300px;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding-top: 3rem;
+}
+
+h2 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  color: #ff988e;
+}
+
+p {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+
 /*desktop*/
 @media only screen and (min-width: 769px) {
-  /* * {
-    box-sizing: border-box;
-  } */
 
   body {
-    font-family: 'Rajdhani', sans-serif;
-    background-color: white;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.25fr 0.75fr 0.25fr;
@@ -168,11 +165,10 @@ p {
     padding-top: 1rem;
     grid-column: 1;
     grid-row: 1/2;
-    text-align: center;
-    color:white;
   }
+
   /*image areas*/
-  #imgSect{
+  #imgSect {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -180,10 +176,14 @@ p {
     grid-row: 2/3;
   }
 
-  /*this was to make images responsive to scale*/
   #bagSect, #padSect, #bottleSect, #gumSect {
     display: block;
     margin: auto;
+    background-color: rgba(254, 254, 254, 0.30);
+  }
+  /*for images to grow from hover*/
+  #bagSect:hover, #padSect:hover, #bottleSect:hover, #gumSect:hover {
+    transform: scale(1.1);
   }
 
   /*modal content/image/p*/
@@ -192,9 +192,10 @@ p {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     margin: auto;
-    padding: 1em;
+    padding: 0.5em;
     width: 80%;
   }
+
   /*modal content*/
   #changeImg {
     width: 300px;

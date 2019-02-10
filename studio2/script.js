@@ -24,62 +24,25 @@ bottle.addEventListener('click', function() {
   modal.style.display = 'block';
   contentHead.innerHTML = 'My Swell Sip Bottle';
   changeImg.setAttribute('src', 'images/bottle.svg');
+  text.innerHTML = 'This water bottle was gifted to me by my friends parents as a christmas present'
+                  + ' I bring it with me everywhere, whether it\'s my backpack or tote bag. '
+                  + 'I never go thirsty if I have my water bottle with me. ' + 'You know gotta stay hydrated and get those 8 cups of water.'
+                  + ' Ideally, I like to drink more than 8 cups of water to keep my skin clear.'
 });
 pad.addEventListener('click', function() {
   modal.style.display = 'block';
   contentHead.innerHTML = 'A Pad For My Menstrual Needs';
   changeImg.setAttribute('src', 'images/pad.svg');
+  text.innerHTML = 'I used to not carry a pad with me before. Yes, it\'s surprising, but I didn\'t track my period before. '
+                    + 'Now I make sure to carry a pad with me because it\'s always a possibility that I\'ll get my period while I\'m in class.';
 });
 gum.addEventListener('click', function() {
   modal.style.display = 'block';
   contentHead.innerHTML = 'Gum For When I Want A Snack';
   changeImg.setAttribute('src', 'images/gum.svg');
+  text.innerHTML = 'I always or at least try to have gum in my bag. ' + 'Sometimes I will have a piece of gum as my breakfast. '
+                    + 'But in reality it\'s something for me to chew on until lunch time :-).';
 });
 close.addEventListener('click', function() {
   modal.style.display = 'none';
-});
-//mouseover/out for image interactivity when user hovers over
-bag.addEventListener('mouseover', function() {
-
-  bag.style.height = '300px';
-  bag.style.width = '300px';
-});
-
-bag.addEventListener('mouseout', function() {
-
-  bag.style.height = '275px';
-  bag.style.width = '275px';
-});
-bottle.addEventListener('mouseover', function() {
-
-  bottle.style.height = '300px';
-  bottle.style.width = '300px';
-});
-
-bottle.addEventListener('mouseout', function() {
-
-  bottle.style.height = '275px';
-  bottle.style.width = '275px';
-});
-pad.addEventListener('mouseover', function() {
-
-  pad.style.height = '300px';
-  pad.style.width = '300px';
-});
-
-pad.addEventListener('mouseout', function() {
-
-  pad.style.height = '275px';
-  pad.style.width = '275px';
-});
-gum.addEventListener('mouseover', function() {
-
-  gum.style.height = '300px';
-  gum.style.width = '300px';
-});
-
-gum.addEventListener('mouseout', function() {
-
-  gum.style.height = '275px';
-  gum.style.width = '275px';
 });
