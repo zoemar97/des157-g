@@ -1,0 +1,56 @@
+/* for responsive */
+* {
+   box-sizing: border-box;
+}
+
+/* overall body */
+body {
+  background-color:#222;
+  font-family: Helvetica, sans-serif;
+  font-size: 100%;
+  overflow:hidden; /* for fullscreen, non-scrolling */
+}
+
+/* game play area */
+section {
+  height: 320px;
+  margin-bottom:24px;
+  background-color: pink;
+  opacity: 1;
+}
+
+/* pixel that moves around */
+div {
+  position:absolute;
+  height:45px;
+  width:45px;
+  background-color:deeppink;
+  text-align: center;
+}
+#doublePix{
+  position:absolute;
+  height:20px;
+  width:20px;
+  background-color:aqua;
+
+}
+/* score and time remaining */
+span {
+  color:white;
+  margin: 24px 12px;
+}
+
+/* reset and fullscreen*/
+button {
+  margin: 12px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 0px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #222;
+}
+img {
+  position:absolute;
+  display:none;
+}
