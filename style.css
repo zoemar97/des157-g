@@ -55,7 +55,7 @@ footer {
   grid-column: 1/4;
   grid-row: 3;
   margin:auto;
-  padding-top: 2rem;
+  padding-top: 1rem;
   position:fixed;
   bottom: 0;
 }
