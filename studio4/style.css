@@ -111,3 +111,10 @@ body {
   background-color: black;
   color: white;
 }
+
+footer {
+
+  padding-top: 1rem;
+  position: fixed;
+  bottom:0;
+}
