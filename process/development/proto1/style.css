@@ -44,12 +44,11 @@ a:hover {
   height: 100%;
   /* dirty hack to make text big and centered */
   text-align: center;
-  font-size: 100vmin;
   color: #333;
 }
 
 #page1 {
-  background-color: blue;
+  background-color: #3946FF;
 }
 
 #page2 {
@@ -65,13 +64,29 @@ a:hover {
 }
 
 #page5 {
-  background-color: gray;
+  background-color: #B270FF;
+  display:inline-block;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: .1fr .1fr .1fr;
+  margin:auto;
+}
+
+input[type="text"] {
+  background-color: white;
+  border-bottom: 2px solid white;
+  border:4px;
+  border-radius: 5px;
+  width: 50%;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: #B270FF;
 }
 
 #girl {
   position: absolute;
   top: 40%;
-  left: 45%;
+  left: 45.8%;
   display: block;
 }
 
@@ -79,4 +94,22 @@ a:hover {
   position: absolute;
   top: 25%;
   left: 39%;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  width: auto;
+  padding: 8px;
+  background-color: #8943E8;
+  border: 4px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-size: 1em;
+  color: white;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background: white;
+  color: #6F16E8;
 }
