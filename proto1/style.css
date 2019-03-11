@@ -44,7 +44,6 @@ a:hover {
   height: 100%;
   /* dirty hack to make text big and centered */
   text-align: center;
-  font-size: 100vmin;
   color: #333;
 }
 
@@ -69,14 +68,13 @@ a:hover {
   display:grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: .1fr .1fr .1fr;
-  width:099px;
-  margin-top: 20px;
+  margin:auto;
 }
 
 input[type="text"] {
   background-color: white;
   border-bottom: 2px solid white;
-  width: 150px;
+  width: 60%;
   margin-left: 10px;
   margin-top: 10px;
   color: #B21E59;
