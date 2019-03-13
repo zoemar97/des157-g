@@ -4,6 +4,13 @@ console.log('reading js');
 var controller = new ScrollMagic.Controller({
   addIndicators: true
 });
+var menu = document.querySelector('#menu');
+var menuModal = document.querySelector('#menuModal');
+
+menu.addEventListener('click', function(){
+  menu.classList.toggle('change');
+  menuModal.style.display = ('block');
+});
 
 controller.scrollTo(function(target) {
 
