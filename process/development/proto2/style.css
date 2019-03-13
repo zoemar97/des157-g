@@ -1,0 +1,192 @@
+/* one page site with scroll */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Helvetica;
+  font-size: 100%;
+  background-color: #7a63ff;
+}
+
+nav {
+  position: fixed;
+  top: 5.5em;
+  right: 1rem;
+  font-size: 1.5em;
+  z-index: 5;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  border: 2px #333 solid;
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+  margin: 1rem;
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover {
+  background-color: white;
+}
+
+.active {
+  background-color: white;
+}
+
+.page {
+  /* setting height 100% for html, body, and for all pages makes each page full viewport */
+  height: 100%;
+  /* dirty hack to make text big and centered */
+  text-align: center;
+  color: #333;
+}
+
+#page1 {
+  background-color: #3946FF;
+}
+
+#page2 {
+  background-color: pink;
+}
+
+#page3 {
+  background-color: green;
+}
+
+#page4 {
+  background-color: coral;
+}
+
+#page5 {
+  background-color: #B270FF;
+  display: inline-block;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: .1fr .1fr .1fr;
+  margin: auto;
+}
+
+input[type="text"] {
+  background-color: white;
+  border-bottom: 2px solid white;
+  border: 4px;
+  border-radius: 5px;
+  width: 50%;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: #B270FF;
+}
+
+#girl {
+  position: absolute;
+  top: 40%;
+  left: 45.8%;
+  display: block;
+}
+
+#mom {
+  position: absolute;
+  top: 25%;
+  left: 39%;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  width: auto;
+  padding: 8px;
+  background-color: #8943E8;
+  border: 4px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-size: 1em;
+  color: white;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background: white;
+  color: #6F16E8;
+}
+
+/*header section*/
+header {
+  display: inline-block;
+}
+
+#button {
+  border: none;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  border-radius: 50px;
+  float: right;
+  top: 0;
+}
+
+#button:hover {
+  background-color: rgba(61, 61, 61, 0.14);
+}
+
+#title {
+  text-align: center;
+  color: white;
+}
+
+#menu {
+  left: 20%;
+  display: inline-block;
+  cursor: pointer;
+}
+#menuModal{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7a63ff;
+  visibility: visible;
+  z-index: 3;
+}
+
+.bar1, .bar2 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.bar3 {
+  width: 25px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+  width:35px;
+}
