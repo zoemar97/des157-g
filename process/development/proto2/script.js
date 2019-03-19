@@ -6,11 +6,18 @@ var controller = new ScrollMagic.Controller({
 });
 var menu = document.querySelector('#menu');
 var menuModal = document.querySelector('#menuModal');
+var close = document.querySelector('#close');
 
-menu.addEventListener('click', function(){
-  menu.classList.toggle('change');
+menu.addEventListener('click', function() {
   menuModal.style.display = ('block');
 });
+close.addEventListener('click', function() {
+  menuModal.style.display = ('none');
+});
+
+
+
+
 
 controller.scrollTo(function(target) {
 
@@ -71,8 +78,37 @@ new ScrollMagic.Scene({
 
 new ScrollMagic.Scene({
     triggerElement: '#page1',
-    triggerHook:0,
-    duration: '90%'
+    triggerHook: 0,
+    duration: '100%'
   })
-  .setPin('#girl', {pushFollowers:false})
+  .setPin('#girl', {
+    pushFollowers: false
+  })
   .addTo(controller);
+new ScrollMagic.Scene({
+    triggerElement: '#page4',
+    triggerHook: 0.4,
+    duration: '40%'
+  })
+  .setPin('#blanket', {
+    pushFollowers: false
+  })
+  .addTo(controller);
+new ScrollMagic.Scene({
+    triggerElement: '#page4',
+    triggerHook: 0.6,
+    duration: '30%'
+  })
+  .setPin('#boyFloor', {
+    pushFollowers: false
+  })
+  .addTo(controller);
+  new ScrollMagic.Scene({
+      triggerElement: '#page4',
+      triggerHook: 0.7,
+      duration: '40%'
+    })
+    .setPin('#boyFloor2', {
+      pushFollowers: false
+    })
+    .addTo(controller);
