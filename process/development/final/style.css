@@ -305,8 +305,10 @@ label {
 }
 
 .container {
+  position: absolute;
   border-radius: 5px;
   padding: 20px;
+  left:5%;
 }
 
 .col-25 {
