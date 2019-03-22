@@ -1,19 +1,26 @@
 /* one page site with scroll */
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: Helvetica;
+  font-family: 'PT Sans', sans-serif;
   font-size: 100%;
   background-color: black;
+  position: relative;
 }
 
+/*side navigation*/
 nav {
   position: fixed;
   top: 30%;
   right: 1rem;
   font-size: 1.5em;
+  z-index: 3;
 }
 
 li {
@@ -21,17 +28,17 @@ li {
 }
 
 #nav a {
-  border: 2px #333 solid;
+  border: 2px white solid;
   border-radius: 50px;
   width: 20px;
   height: 20px;
   margin: 1rem;
-  color: #333;
+  color: white;
   text-decoration: none;
   display: inline-block;
 }
 
-a:hover {
+#nav a:hover {
   background-color: white;
 }
 
@@ -39,33 +46,168 @@ a:hover {
   background-color: white;
 }
 
+/*header section*/
+header {
+  background-color: black;
+  height: 10%;
+}
+
+/*petition button*/
+#button {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: rgba(61, 61, 61, 0.14);
+  color: white;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  right: 1em;
+}
+
+#button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+#title {
+  color: white;
+  text-align: center;
+}
+
+/*menu section wrap for hamburger*/
+#menu {
+  position: absolute;
+  left: 1em;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/*menu modal*/
+#menuModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 3;
+  overflow: hidden;
+}
+#menuModal ul{
+  position: absolute;
+  top:25%;
+  right: 25%;
+  left: 25%;
+}
+#menuModal h1{
+  position: absolute;
+  color: white;
+  font-size: 5em;
+  top:0;
+  right:35%;
+}
+
+/*close menu*/
+#close {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  font-size: 3em;
+  color: white;
+}
+
+#menuModal li {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  display: block;
+  line-height: 2em;
+}
+
+#menuModal a {
+  text-decoration: none;
+}
+
+/*css for menu hamburger menu*/
+.bar1, .bar2 {
+  width: 35px;
+  height: 2px;
+  background-color: white;
+  margin: 10px 0;
+  transition: 0.4s;
+}
+
+.bar3 {
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 10px 0;
+  transition: 0.4s;
+}
+
+/*page layout/page definition*/
 .page {
   height: 100%;
-  width:100%;
-  text-align: center;
+  width: 100%;
   color: #333;
 }
 
+/*paragraph content inside pages*/
+p {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.8em;
+  position: absolute;
+  color: white;
+  font-size: 5vmin;
+  text-align: center;
+  z-index: 2;
+  text-shadow:1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*scrolling pages*/
 #page1 {
-  background-color: #3946FF;
-  top: 25%;
+  position: relative;
+  background: rgb(62, 143, 232);
+  background: linear-gradient(180deg, rgba(62, 143, 232, 1) 0%, rgba(115, 231, 255, 1) 100%);
+}
+#page1 p{
+  margin-top:0;
 }
 
 #page2 {
-  background-color: pink;
+  position: relative;
+  background: rgb(115, 231, 255);
+  background: linear-gradient(180deg, rgba(115, 231, 255, 1) 0%, rgba(233, 231, 181, 1) 100%);
 }
-
+#page2 p{
+  top:70%;
+}
 #page3 {
-  background-color: green;
+  position: relative;
+  background: rgb(233, 231, 181);
+  background: linear-gradient(180deg, rgba(233, 231, 181, 1) 5%, rgba(140, 140, 140, 1) 100%);
+}
+#page3 p{
+  top:73%;
 }
 
 #page4 {
-  background-color: coral;
+  position: relative;
+  background: rgb(140, 140, 140);
+  background: linear-gradient(180deg, rgba(140, 140, 140, 1) 37%, rgba(0, 0, 0, 1) 100%);
+}
+#page4 p{
+  top:10%;
 }
 
-
 #page5 {
-  background-color: #B270FF;
+  position: relative;
   display: inline-block;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -73,6 +215,64 @@ a:hover {
   margin: auto;
 }
 
+/*page 1 elements*/
+#girl {
+  position: absolute;
+  top: 45%;
+  left: 49%;
+  display: block;
+  z-index: 1;
+  width: 125px;
+  height: auto;
+}
+
+#mom {
+  position: absolute;
+  top: 25%;
+  left: 39%;
+  width: 150px;
+  height: auto;
+}
+
+/*page 2 content*/
+
+
+/*page 3 content*/
+#tent {
+  position: absolute;
+  width: 90%;
+  height: auto;
+  top: 0;
+  left:5%;
+  right:10%;
+}
+
+/*page 4 content*/
+#blanket {
+  width: 325px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 8%;
+  z-index: 2;
+}
+
+#boyFloor {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  left: 5%;
+}
+
+#boyFloor2 {
+  width: 400px;
+  height: auto;
+  position: absolute;
+  right: 5%;
+}
+
+/*page 5 content*/
+/*petition form*/
 input[type="text"] {
   background-color: white;
   border-bottom: 2px solid white;
@@ -82,44 +282,6 @@ input[type="text"] {
   margin-left: 10px;
   margin-top: 10px;
   color: #B270FF;
-}
-
-#girl {
-  position: absolute;
-  top: 40%;
-  left: 45.8%;
-  display: block;
-}
-
-#mom {
-  position: absolute;
-  top: 25%;
-  left: 39%;
-}
-#blanket{
-  width: 325px;
-  height: auto;
-  position: absolute;
-  right:8%;
-  z-index: 2;
-}
-#boyFloor{
-  width: 300px;
-  height: auto;
-  position: absolute;
-  left:5%;
-}
-#boyFloor2{
-  width: 400px;
-  height: auto;
-  position: absolute;
-  right: 5%;
-}
-.tent{
-  width: 500px;
-  height: auto;
-  position: absolute;
-  left: 0;
 }
 
 input[type="submit"],
@@ -140,95 +302,16 @@ input[type="reset"]:hover {
   color: #6F16E8;
 }
 
-/*header section*/
-header {
-background-color: black;
-}
-
-#button {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.15);
-  color: white;
-  border-radius: 50px;
-  position: absolute;
-  top: 1em;
-  right: 1em;
-
-}
-
-#button:hover {
-  background-color: rgba(61, 61, 61, 0.14);
-}
-
-#title {
-  color: white;
-  text-align: center;
-}
-p{
-  color: white;
-  font-size: 3em;
-  margin: auto;
-  top: 25%;
-
-}
-
-#menu {
-  position: absolute;
-  top:1em;
-  left:1em;
-  display: inline-block;
-  cursor: pointer;
-}
-#menuModal{
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  z-index: 2;
-  overflow: hidden;
-}
-#close{
-  position: absolute;
-  top: 0.5em;
-  left: 0.5em;
-  font-size: 3em;
-  color: white;
-}
-#menuModal li{
-  color:white;
-  font-size:2em;
-  text-align: center;
-  display: block;
-  line-height: 2em;
-}
-#menuModal a{
-  text-decoration: none;
-}
-.bar1, .bar2 {
-  width: 35px;
-  height: 2px;
-  background-color: white;
-  margin: 10px 0;
-  transition: 0.4s;
-}
-
-.bar3 {
-  width: 25px;
-  height: 2px;
-  background-color: white;
-  margin: 10px 0;
-  transition: 0.4s;
-}
-footer{
+/*bottom footer -> change to fixed/sticky?*/
+footer {
   height: 50px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: line-through;
 }
